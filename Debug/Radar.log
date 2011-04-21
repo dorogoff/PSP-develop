@@ -1,0 +1,34 @@
+﻿Build started 14.12.2010 0:52:01.
+     1>Project "F:\PSP\Projects\Radar_circle\Radar.vcxproj" on node 2 (build target(s)).
+     1>Build:
+         make
+         main.c: In function 'main':
+         psp-gcc -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -D_PSP_FW_VERSION=150   -c -o main.o main.c
+         main.c:124: warning: implicit declaration of function 'atoi'
+         psp-gcc -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -D_PSP_FW_VERSION=150  -L. -LC:/pspsdk/psp/sdk/lib   main.o graphics.o framebuffer.o -lpspgu -lpng -lz -lm -lpspdebug -lpspdisplay -lpspge -lpspctrl -lpspsdk -lc -lpspnet -lpspnet_inet -lpspnet_apctl -lpspnet_resolver -lpsputility -lpspuser -lpspkernel -o Radar.elf
+         main.c:197: warning: unused variable 'bit'
+         main.c:153: warning: unused variable 'tmp'
+         main.c:144: warning: unused variable 'j'
+         main.c:105: warning: label 'start' defined but not used
+         main.c:99: warning: unused variable 'corner'
+         main.c: In function 'ArraySize':
+         main.c:281: warning: comparison between pointer and integer
+         psp-fixup-imports Radar.elf
+         psp-strip Radar.elf -o Radar_strip.elf
+         pack-pbp EBOOT.PBP PARAM.SFO NULL  \
+         	NULL NULL NULL  \
+         	NULL  Radar_strip.elf NULL
+         [0]        408 bytes | PARAM.SFO
+         [1]          0 bytes | NULL
+         [2]          0 bytes | NULL
+         [3]          0 bytes | NULL
+         [4]          0 bytes | NULL
+         [5]          0 bytes | NULL
+         [6]     298512 bytes | Radar_strip.elf
+         [7]          0 bytes | NULL
+         C:/pspsdk/bin/rm -f Radar_strip.elf
+     1>Done Building Project "F:\PSP\Projects\Radar_circle\Radar.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.30
