@@ -1,0 +1,25 @@
+﻿Build started 28.11.2010 14:00:33.
+     1>Project "F:\PSP\Projects\Begunok\Begunok.vcxproj" on node 2 (build target(s)).
+     1>Build:
+         make
+         psp-gcc -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -D_PSP_FW_VERSION=150   -c -o main.o main.c
+         psp-gcc -I. -IC:/pspsdk/psp/sdk/include -O2 -G0 -Wall -D_PSP_FW_VERSION=150  -L. -LC:/pspsdk/psp/sdk/lib   main.o graphics.o framebuffer.o -lpspgu -lpng -lz -lm -lpspdebug -lpspdisplay -lpspge -lpspctrl -lpspsdk -lc -lpspnet -lpspnet_inet -lpspnet_apctl -lpspnet_resolver -lpsputility -lpspuser -lpspkernel -o Begunok.elf
+         psp-fixup-imports Begunok.elf
+         psp-strip Begunok.elf -o Begunok_strip.elf
+         pack-pbp EBOOT.PBP PARAM.SFO NULL  \
+         	NULL NULL NULL  \
+         	NULL  Begunok_strip.elf NULL
+         [0]        408 bytes | PARAM.SFO
+         [1]          0 bytes | NULL
+         [2]          0 bytes | NULL
+         [3]          0 bytes | NULL
+         [4]          0 bytes | NULL
+         [5]          0 bytes | NULL
+         [6]     285980 bytes | Begunok_strip.elf
+         [7]          0 bytes | NULL
+         C:/pspsdk/bin/rm -f Begunok_strip.elf
+     1>Done Building Project "F:\PSP\Projects\Begunok\Begunok.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.94
